@@ -13,7 +13,7 @@ npm install rpi-rgb-led-matrix
 var board = require('rpi-rgb-led-matrix')
 ```
 
-#### start(rows=32, columns=32, chain=1, parallel=1 clearOnClose=true)
+#### start(rows=32, columns=32, chain=1, parallel=1, clearOnClose=true)
 
 Start updating the board.
 
