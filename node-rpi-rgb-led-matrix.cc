@@ -20,9 +20,11 @@ Canvas *canvas;
 GPIO io;
 
 NAN_METHOD(start) {
-  int rows = args[0]->IntegerValue();
-  int chain = args[1]->IntegerValue();
-  canvas = new RGBMatrix(&io, rows, chain);
+  int rows      = args[0]->IntegerValue();
+  int columns   = args[1]->IntegerValue();
+  int chain     = args[2]->IntegerValue();
+  int parallel  = args[3]->IntegerValue();
+  canvas = new RGBMatrix(&io, rows, columns, chain, parallel);
   NanReturnUndefined();
 }
 

@@ -4,7 +4,8 @@
 ## Installation
 
 ```
-npm install rpi-rgb-led-matrix
+comming...
+use github instead.
 ```
 
 ## Usage
@@ -13,18 +14,21 @@ npm install rpi-rgb-led-matrix
 var board = require('rpi-rgb-led-matrix')
 ```
 
-#### start(rows=32, chain=1, clearOnClose=true)
+#### start(rows=32, columns=32, chain=1, parallel=1, clearOnClose=true)
 
 Start updating the board.
 
-- rows - Vertical height of the board
+- rows 		- Vertical height of the board
+- columns 	- Horizontal width of board
 
 - chain - Number of boards chained together
+
+- parallel - Number of chains running parralel
 
 - clearOnClose - Automatically clear the display when node is shutting down
 
 ```javascript
-board.start(16, 1, true)
+board.start(16, 32,  1, 1, true)
 ```
 
 #### stop()

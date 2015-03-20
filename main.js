@@ -5,12 +5,14 @@ var addon = bindings('rpi_rgb_led_matrix')
 var isStarted = false
 
 var board = module.exports = {
-	start: function(rows, chain, clearOnClose) {
+	start: function(rows, columns, chain, paralel, clearOnClose) {
 		if (!rows) rows = 32
+		if (!columns) columns = 32
 		if (!chain) chain = 1
+		if (!parallel) parallel = 1
 		clearOnClose = clearOnClose !== false
 
-		addon.start(rows, chain)
+		addon.start(rows, columns, chain, parallel)
 		isStarted = true
 
 		if (clearOnClose) {
