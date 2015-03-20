@@ -4,7 +4,8 @@
 ## Installation
 
 ```
-npm install rpi-rgb-led-matrix
+comming...
+use github instead.
 ```
 
 ## Usage
